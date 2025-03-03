@@ -1,6 +1,6 @@
 using HintsDemo
 using Test
 
-@testset "HintsDemo.jl" begin
-    # Write your tests here.
+@testset "ExampleGeneration.jl" begin
+    include("ExampleGenerationTests.jl")
 end
