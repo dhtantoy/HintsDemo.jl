@@ -11,9 +11,9 @@ end
 function train_deeponet!((deeponet, ps, st), (U, F), epochs::Integer=10;
     batch_size::Integer=10,
     dev=cpu_device(),
-    train_ratio::Real=0.8,
     learning_rate::Real=5e-4)
 
+    train_ratio = 1 - batch_size / size(U, 2)
     cdev = cpu_device()
     ps = ps |> dev 
     st = st |> dev
